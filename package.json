@@ -1,0 +1,29 @@
+{
+  "name": "theme-d-vscode",
+  "displayName": "Theme-D Language",
+  "description": "Support for the Theme-D language",
+  "version": "1.0.0",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/tohoyn/theme-d-vscode.git"    
+  },
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "theme-d",
+      "aliases": ["Theme-D", "theme-d"],
+      "extensions": [".thp",".ths",".thi",".thb"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "theme-d",
+      "scopeName": "source.theme-d",
+      "path": "./syntaxes/theme-d.tmLanguage.json"
+    }]
+  }
+}
