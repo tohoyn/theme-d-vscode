@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.1] - 2024-09-26
+
+- Added special forms iterate-list, iterate-list-pure, iterate-list-with-break, and iterate-list-with-break-pure.
+
 ## [1.0.0] - 2024-09-25
 
 - Initial release

@@ -11,6 +11,10 @@ editor.bracketPairColorization.enabled.
 
 Users appreciate release notes as you update your extension.
 
+### 1.0.1
+
+Added special forms iterate-list, iterate-list-pure, iterate-list-with-break, and iterate-list-with-break-pure.
+
 ### 1.0.0
 
 Initial release of the Theme-D language support in VSCode.

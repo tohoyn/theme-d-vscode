@@ -184,6 +184,10 @@
 				{
 					"match": "(?<=(\\s|\\())(assert|strong-assert|_assert|_strong-assert)(?=(\\s|\\)))",
 					"name": "storage.control.theme-d"
+				},
+				{
+					"match": "(?<=(\\s|\\())(iterate-list|iterate-list-pure|iterate-list-with-break|iterate-list-with-break-pure)(?=(\\s|\\)))",
+					"name": "storage.control.theme-d"
 				}
 			]
 		},
