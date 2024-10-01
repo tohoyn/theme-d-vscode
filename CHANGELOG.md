@@ -9,13 +9,16 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.0.2] - 2024-10-01
 
 - Fixed colouring of type names.
-- Added special forms iterate-2-lists, iterate-2-lists-pure, iterate-2-lists-with-break, and iterate-2-lists-with-break-pure,
-receive, and fluid-let.
+- Added special forms iterate-2-lists, iterate-2-lists-pure,
+  iterate-2-lists-with-break, iterate-2-lists-with-break-pure,
+  receive, and fluid-let.
 
 ## [1.0.1] - 2024-09-26
 
-- Added special forms iterate-list, iterate-list-pure, iterate-list-with-break, and iterate-list-with-break-pure.
+- Added special forms iterate-list, iterate-list-pure, iterate-list-with-break,
+  and iterate-list-with-break-pure.
 
 ## [1.0.0] - 2024-09-25
 
 - Initial release
+
