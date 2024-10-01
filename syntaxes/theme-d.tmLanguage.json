@@ -1,208 +1,216 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Theme-D",
-	"patterns": [
-		{
-			"include": "#comment"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-                {
-                        "include": "#constants"
-                },
-                {
-                        "include": "#types"
-                }
-	],
-	"repository": {
-		"comment": {
-			"begin": ";",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.comment.theme-d"
-				}
-			},
-			"end": "$",
-			"name": "comment.line.semicolon.theme-d"
-		},
-		"constants": {
-			"patterns": [
-				{
-					"match": "(?<=(\\s|\\())(null)(?=(\\s|\\)))",
-					"name": "constant.language.nil.theme-d"
-				},
-				{
-					"match": "(#t|#f)",
-					"name": "constant.language.boolean.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())([+-](?:inf|-inf|nan).0)(?=(\\s|\\)))",
-					"name": "constant.numeric.symbol.theme-d"
-				},
-				{
-					"match": "([-+]?(?:(?:3[0-6])|(?:[12]\\d)|[2-9])[rR][0-9A-Za-z]+N?)",
-					"name": "constant.numeric.arbitrary-radix.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(#[xX][0-9a-fA-F]+N?)(?=(\\s|\\)))",
-					"name": "constant.numeric.hexadecimal.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(#[oO][0-7]+N?)(?=(\\s|\\)))",
-					"name": "constant.numeric.octal.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())([-+]?[0-9]+(?:(\\.|(?=[eEM]))[0-9]*([eE][-+]?[0-9]+)?)M?)(?=(\\s|\\)))",
-					"name": "constant.numeric.double.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())([-+]?\\d+N?)(?=(\\s|\\)))",
-					"name": "constant.numeric.long.theme-d"
-				},
-				{
-					"include": "#keyword"
-				}
-			]
-		},
-		"strings": {
-			"name": "string.quoted.double.theme-d",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.theme-d",
-					"match": "\\\\."
-				}
-			]
-		},
-		"keywords": {
-			"patterns": [
-				{
-                                        "match": "(?<=(\\s|\\())(define-proper-program|define-script|define-interface|define-body)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(import|import-and-reexport|reexport|use|prevent-stripping|prelink-body|friend|@)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(define-syntax|syntax-rules|syntax-case|syntax|with-syntax|let-syntax|letrec-syntax)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(define|define-mutable|define-volatile|define-virtual-gen-proc|define-simple-proc|define-param-proc|define-simple-method|define-param-method|define-main-proc)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(define-simple-virtual-method|define-static-simple-virtual-method|define-param-virtual-method|define-static-param-virtual-method)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(declare|declare-method|declare-virtual-method|declare-static-virtual-method)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(add-method|add-virtual-method|add-static-virtual-method)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(include-methods|include-virtual-methods|include-static-virtual-methods)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(lambda|lambda-automatic|param-lambda|param-lambda-automatic)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(define-class|define-prim-class|define-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(define-class|define-prim-class|define-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(define-param-proc-alt|add-param-method-alt)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(define-signature|define-param-signature)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(prim-proc|unchecked-prim-proc|param-prim-proc|unchecked-param-prim-proc)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-                                        "match": "(?<=(\\s|\\())(\\$lambda|\\$define|\\$let|\\$let\\*|\\$letrec|\\$letrec\\*)(?=(\\s|\\)))",
-					"name": "keyword.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(begin|if|if-object|cond|cond-object|do|case|until|constructor|make|set!|quote|else|=>)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(let|let\\*|let-mutable|let\\*-mutable|let-volatile|let\\*-volatile)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(letrec|letrec\\*|letrec-mutable|letrec\\*-mutable|letrec-volatile|letrec\\*-volatile)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(cast|try-cast|static-cast|match-type|match-type-strong|static-type-of)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(param-proc-instance|param-proc-dispatch|param-proc-cond-appl|generic-proc-dispatch|generic-proc-dispatch-without-result|static-gen-proc-dispatch)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(tuple-type-with-tail|field-ref|field-set!|class-of|apply|apply-nonpure)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(guard|guard-nonpure|guard-without-result)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(guard0|guard0-nonpure|guard0-without-result)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(guard-general|guard-general-nonpure|guard-general-without-result)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(raise|raise-simple)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(assert|strong-assert|_assert|_strong-assert)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				},
-				{
-					"match": "(?<=(\\s|\\())(iterate-list|iterate-list-pure|iterate-list-with-break|iterate-list-with-break-pure)(?=(\\s|\\)))",
-					"name": "storage.control.theme-d"
-				}
-			]
-		},
-                "types": {
-                        "patterns": [
-                                {
-                                        "match": "(?<=(\\s|\\())(<.*>)(?=(\\s|\\)))",
-                                        "name": "entity.name.type.theme-d"
-                                },
-                                {
-                                        "match": "(?<=(\\s|\\())([:%][^\\s\\)]*)(?=(\\s|\\)))",
-                                        "name": "entity.name.type.theme-d"
-                                }
-                        ]
-                }
-	},
-	"scopeName": "source.theme-d"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Theme-D",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#types"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "begin": ";",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.theme-d"
+        }
+      },
+      "end": "$",
+      "name": "comment.line.semicolon.theme-d"
+    },
+    "constants": {
+      "patterns": [
+        {
+          "match": "(?<=(\\s|\\())(null)(?=(\\s|\\)))",
+          "name": "constant.language.nil.theme-d"
+        },
+        {
+          "match": "(#t|#f)",
+          "name": "constant.language.boolean.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())([+-](?:inf|-inf|nan).0)(?=(\\s|\\)))",
+          "name": "constant.numeric.symbol.theme-d"
+        },
+        {
+          "match": "([-+]?(?:(?:3[0-6])|(?:[12]\\d)|[2-9])[rR][0-9A-Za-z]+N?)",
+          "name": "constant.numeric.arbitrary-radix.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(#[xX][0-9a-fA-F]+N?)(?=(\\s|\\)))",
+          "name": "constant.numeric.hexadecimal.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(#[oO][0-7]+N?)(?=(\\s|\\)))",
+          "name": "constant.numeric.octal.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())([-+]?[0-9]+(?:(\\.|(?=[eEM]))[0-9]*([eE][-+]?[0-9]+)?)M?)(?=(\\s|\\)))",
+          "name": "constant.numeric.double.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())([-+]?\\d+N?)(?=(\\s|\\)))",
+          "name": "constant.numeric.long.theme-d"
+        },
+        {
+          "include": "#keyword"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.theme-d",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.theme-d",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "(?<=(\\s|\\())(define-proper-program|define-script|define-interface|define-body)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(import|import-and-reexport|reexport|use|prevent-stripping|prelink-body|friend|@)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(define-syntax|syntax-rules|syntax-case|syntax|with-syntax|let-syntax|letrec-syntax)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(define|define-mutable|define-volatile|define-virtual-gen-proc|define-simple-proc|define-param-proc|define-simple-method|define-param-method|define-main-proc)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(define-simple-virtual-method|define-static-simple-virtual-method|define-param-virtual-method|define-static-param-virtual-method)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(declare|declare-method|declare-virtual-method|declare-static-virtual-method)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(add-method|add-virtual-method|add-static-virtual-method)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(include-methods|include-virtual-methods|include-static-virtual-methods)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(lambda|lambda-automatic|param-lambda|param-lambda-automatic)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(define-class|define-prim-class|define-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(define-class|define-prim-class|define-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(define-param-proc-alt|add-param-method-alt)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(define-signature|define-param-signature)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(prim-proc|unchecked-prim-proc|param-prim-proc|unchecked-param-prim-proc)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(\\$lambda|\\$define|\\$let|\\$let\\*|\\$letrec|\\$letrec\\*)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(begin|if|if-object|cond|cond-object|do|case|until|constructor|make|set!|quote|else|=>)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(let|let\\*|let-mutable|let\\*-mutable|let-volatile|let\\*-volatile)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(letrec|letrec\\*|letrec-mutable|letrec\\*-mutable|letrec-volatile|letrec\\*-volatile)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(cast|try-cast|static-cast|match-type|match-type-strong|static-type-of)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(param-proc-instance|param-proc-dispatch|param-proc-cond-appl|generic-proc-dispatch|generic-proc-dispatch-without-result|static-gen-proc-dispatch)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(tuple-type-with-tail|field-ref|field-set!|class-of|apply|apply-nonpure)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(guard|guard-nonpure|guard-without-result)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(guard0|guard0-nonpure|guard0-without-result)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(guard-general|guard-general-nonpure|guard-general-without-result)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(raise|raise-simple)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(assert|strong-assert|_assert|_strong-assert)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(iterate-list|iterate-list-pure|iterate-list-with-break|iterate-list-with-break-pure)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(iterate-2-lists|iterate-2-lists-pure|iterate-2-lists-with-break|iterate-2-lists-with-break-pure)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(receive|fluid-let)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "match": "(?<=(\\s|\\())(<[^>]*>)(?=(\\s|\\)))",
+          "name": "entity.name.type.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())([:%][^\\s\\)]*)(?=(\\s|\\)))",
+          "name": "entity.name.type.theme-d"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.theme-d"
 }
