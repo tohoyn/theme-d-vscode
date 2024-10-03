@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.3] - 2024-10-03
+
+- Added publisher to package.json.
+
 ## [1.0.2] - 2024-10-01
 
 - Fixed colouring of type names.

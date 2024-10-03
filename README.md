@@ -4,12 +4,9 @@ This package provides support for the Theme-D programming language in Visual Stu
 
 ## Useful VSCode Configuration Variables
 
-If you don't want the brackets in your source code to be colourized switch off the configuration variable
-editor.bracketPairColorization.enabled.
+If you don't want the brackets in your source code to be colourized switch off the configuration variable editor.bracketPairColorization.enabled.
 
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
 
 ### 1.0.1
 

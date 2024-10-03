@@ -122,10 +122,6 @@
           "name": "keyword.control.theme-d"
         },
         {
-          "match": "(?<=(\\s|\\())(define-class|define-prim-class|define-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
-          "name": "keyword.control.theme-d"
-        },
-        {
           "match": "(?<=(\\s|\\())(define-param-proc-alt|add-param-method-alt)(?=(\\s|\\)))",
           "name": "keyword.control.theme-d"
         },
