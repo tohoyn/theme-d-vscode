@@ -9,7 +9,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.0.4] - 2024-10-05
 
 - Changed line comment to ;; in language-configuration.json.
-- Changed publisher to tohoyn in package.json.
 
 ## [1.0.3] - 2024-10-03
 
