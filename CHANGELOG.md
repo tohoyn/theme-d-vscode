@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.5] - 2024-10-12
+
+- Added some keywords.
+
 ## [1.0.4] - 2024-10-05
 
 - Changed line comment to ;; in language-configuration.json.
