@@ -90,7 +90,7 @@
           "name": "keyword.control.theme-d"
         },
         {
-          "match": "(?<=(\\s|\\())(define-syntax|syntax-rules|syntax-case|syntax|with-syntax|let-syntax|letrec-syntax)(?=(\\s|\\)))",
+          "match": "(?<=(\\s|\\())(define-syntax|syntax-rules|syntax-case|syntax|with-syntax|let-syntax|letrec-syntax|identifier-syntax)(?=(\\s|\\)))",
           "name": "keyword.control.theme-d"
         },
         {
@@ -106,6 +106,22 @@
           "name": "keyword.control.theme-d"
         },
         {
+          "match": "(?<=(\\s|\\())(declare-simple-method|declare-static-simple-method|declare-param-method|declare-static-param-method)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(declare-simple-virtual-method|declare-static-simple-virtual-method)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(declare-param-virtual-method|declare-static-param-virtual-method)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())( )(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
           "match": "(?<=(\\s|\\())(add-method|add-virtual-method|add-static-virtual-method)(?=(\\s|\\)))",
           "name": "keyword.control.theme-d"
         },
@@ -118,7 +134,7 @@
           "name": "keyword.control.theme-d"
         },
         {
-          "match": "(?<=(\\s|\\())(define-class|define-prim-class|define-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
+          "match": "(?<=(\\s|\\())(define-class|define-prim-class|define-goops-class|define-normal-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
           "name": "keyword.control.theme-d"
         },
         {
@@ -191,6 +207,26 @@
         },
         {
           "match": "(?<=(\\s|\\())(receive|fluid-let)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(and|or|not|and-object|or-object|not-object)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(call/cc|call/cc-nonpure|call/cc-without-result)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(call-with-current-continuation|call-with-current-continuation-nonpure|call-with-current-continuation-without-result)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(exec/cc|exec/cc-nonpure|exec/cc-without-result)(?=(\\s|\\)))",
+          "name": "storage.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(exec-with-current-continuation|exec-with-current-continuation-nonpure|exec-with-current-continuation-without-result)(?=(\\s|\\)))",
           "name": "storage.control.theme-d"
         }
       ]
