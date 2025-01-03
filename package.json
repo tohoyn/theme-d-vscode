@@ -2,7 +2,7 @@
   "name": "theme-d-vscode",
   "displayName": "Theme-D Language",
   "description": "Support for the Theme-D language",
-  "version": "1.0.7",
+  "version": "1.0.5",
   "publisher": "tohoyn2",
   "repository": {
         "type": "git",

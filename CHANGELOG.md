@@ -6,6 +6,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.6] - 2025-01-03
+
+- Removed keyword match-type-strong and added keyword match-type-weak.
+- Added keywords create, static-type-of0 and type-of.
+
 ## [1.0.5] - 2024-10-12
 
 - Added some keywords.
