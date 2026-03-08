@@ -40,6 +40,10 @@
           "name": "constant.language.boolean.theme-d"
         },
         {
+          "name": "constant.character.theme-d",
+          "match": "#\\\\(alarm|backspace|delete|escape|newline|null|return|space|tab|x[0-9a-fA-F]+|.)"
+        },
+        {
           "match": "(?<=(\\s|\\())([+-](?:inf|-inf|nan).0)(?=(\\s|\\)))",
           "name": "constant.numeric.symbol.theme-d"
         },
@@ -102,7 +106,7 @@
           "name": "keyword.control.theme-d"
         },
         {
-          "match": "(?<=(\\s|\\())(declare|declare-method|declare-virtual-method|declare-static-virtual-method)(?=(\\s|\\)))",
+          "match": "(?<=(\\s|\\())(declare|declare-mutable|declare-method|declare-virtual-method|declare-static-virtual-method)(?=(\\s|\\)))",
           "name": "keyword.control.theme-d"
         },
         {
@@ -134,7 +138,7 @@
           "name": "keyword.control.theme-d"
         },
         {
-          "match": "(?<=(\\s|\\())(define-class|define-prim-class|define-goops-class|define-normal-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
+          "match": "(?<=(\\s|\\())(define-class|define-foreign-prim-class|define-foreign-goops-class|define-normal-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
           "name": "keyword.control.theme-d"
         },
         {
