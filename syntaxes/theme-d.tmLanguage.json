@@ -138,7 +138,15 @@
           "name": "keyword.control.theme-d"
         },
         {
+          "match": "(?<=(\\s|\\())(define-enum)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
           "match": "(?<=(\\s|\\())(define-class|define-foreign-prim-class|define-foreign-goops-class|define-normal-goops-class|define-param-class|define-param-logical-type)(?=(\\s|\\)))",
+          "name": "keyword.control.theme-d"
+        },
+        {
+          "match": "(?<=(\\s|\\())(define-new-goops-class)(?=(\\s|\\)))",
           "name": "keyword.control.theme-d"
         },
         {
@@ -194,7 +202,7 @@
           "name": "storage.control.theme-d"
         },
         {
-          "match": "(?<=(\\s|\\())(raise|raise-simple)(?=(\\s|\\)))",
+          "match": "(?<=(\\s|\\())(raise|raise-simple|raise-rte-exception)(?=(\\s|\\)))",
           "name": "storage.control.theme-d"
         },
         {

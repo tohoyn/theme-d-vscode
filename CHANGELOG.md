@@ -6,6 +6,20 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.9] - 2026-11-12
+
+- Added keywords define-enum and define-new-goops-class and procedure raise-rte-exception.
+
+## [1.0.8] - 2026-05-23
+
+- Updated README.md.
+
+## [1.0.7] - 2026-03-08
+
+- Set the notIn attributes for brackets.
+- Detect character constants.
+- Updated keywords.
+
 ## [1.0.6] - 2025-01-03
 
 - Removed keyword match-type-strong and added keyword match-type-weak.
